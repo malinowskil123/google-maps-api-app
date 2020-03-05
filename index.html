@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <title>My Geocode App</title>
+    <style>
+      #main-container{
+        max-width: 65vw;
+      }
+      #map {
+        height: 250px;
+        width: 100%;
+      }
+      @media(min-height: 668px){
+        #map{
+         height: 450px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div  id="main-container" class="container">
+      <h1 class="text-center">Geocode App</h1>
+      <form id="location-form" class="card mb-2 p-4">
+        <input
+          id="location-input"
+          placeholder="enter location"
+          class="form-control form-control-lg mb-4"
+          required
+        />
+        <button class="btn btn-primary btn-block">Submit</button>
+      </form>
+      <div class="card mb-2" id="formatted-address"></div>
+      <div class="card mb-2" id="geometry"></div>
+      <div id="map"></div>
+    </div>
+    <!-- my code -->
+    <script src="/index.js"></script>
+    </script>
+    <!-- required script for fn initMap -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQuVmUSMvXSooCt0trsurxhelMeWGVeZE&callback=initMap"
+    async defer></script>
+  </body>
+</html>
